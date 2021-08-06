@@ -1,17 +1,14 @@
-import { React, useState } from "react";
-import Testo from "./testo";
+import { React, Component } from "react";
+import ChartWrapper from "./components/chartWrapper";
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  return (
-    <div className="App">
-      <Testo onClick={() => setCounter(counter + 1)} person="pedro"></Testo>
-      <Testo onClick={() => setCounter(counter + 1)} person="juan"></Testo>
-      <Testo onClick={() => setCounter(counter + 1)} person="laura"></Testo>
-      Times clicked: {counter}
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <ChartWrapper />
+      </div>
+    );
+  }
+}
 
 export default App;
